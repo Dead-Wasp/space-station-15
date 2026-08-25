@@ -69,10 +69,6 @@ Licenses of borrowed assets are down below
 - src/main/resources/assets/spacestation/textures/item/plant/chilli
 - src/main/resources/assets/spacestation/textures/block/plant/chilli
 
-`CC-BY-SA-3.0` Taken from https://github.com/vgstation-coders/vgstation13/commit/1dbcf389b0ec6b2c51b002df5fef8dd1519f8068, Growth, dead, harvest, and produce created by Chaoticaa (GitHub)
-- src/main/resources/assets/spacestation/textures/item/plant/corn
-- src/main/resources/assets/spacestation/textures/block/plant/corn
-
 `CC-BY-SA-3.0` Taken from tgstation at https://github.com/tgstation/tgstation/commit/e245d374b2976c73d0aff37cf4a443d2e75c2f57, inhands by mubururu_ (github)
 - src/main/resources/assets/spacestation/textures/item/plant/cotton
 - src/main/resources/assets/spacestation/textures/block/plant/cotton

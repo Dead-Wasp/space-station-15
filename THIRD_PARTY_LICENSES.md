@@ -81,10 +81,6 @@ Licenses of borrowed assets are down below
 - src/main/resources/assets/spacestation/textures/item/plant/eggplang
 - src/main/resources/assets/spacestation/textures/block/plant/eggplang
 
-`CC-BY-SA-3.0` Taken from https://github.com/vgstation-coders/vgstation13/commit/1dbcf389b0ec6b2c51b002df5fef8dd1519f8068, seed.png modified from https://github.com/space-wizards/space-station-14/pull/23210/files#diff-13896c37cf761a5782bb95bbc433bb738dd59ed89276af17dccd606adb759ee5 by Chaoticaa (GitHub), Growth stages, dead, and harvest sprites created by Chaoticaa (GitHub)
-- src/main/resources/assets/spacestation/textures/item/plant/eggy
-- src/main/resources/assets/spacestation/textures/block/plant/eggy
-
 `CC-BY-SA-3.0` Taken from https://github.com/tgstation/tgstation/commit/9f2e55e83cb93e7124d06c705d1942dfec63c93a, produce created by Chaoticaa (GitHub)
 - src/main/resources/assets/spacestation/textures/item/plant/garlic
 - src/main/resources/assets/spacestation/textures/block/plant/garlic

@@ -1,0 +1,18 @@
+{
+  "target": "spacestation:towercap_crop",
+  "mutations": [
+    {
+      "type": "nothing",
+      "weight": 7
+    },
+    {
+      "type": "death",
+      "weight": 4,
+      "block": "minecraft:oak_log"
+    },
+    {
+      "type": "grow",
+      "weight": 4
+    }
+  ]
+}

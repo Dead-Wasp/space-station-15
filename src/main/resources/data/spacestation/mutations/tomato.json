@@ -1,0 +1,26 @@
+{
+  "target": "spacestation:tomato_crop",
+  "mutations": [
+    {
+      "type": "nothing",
+      "weight": 7
+    },
+    {
+      "type": "death",
+      "weight": 4,
+      "block": "minecraft:dead_bush"
+    },
+    {
+      "type": "grow",
+      "weight": 3
+    },
+    {
+      "type": "transform",
+      "weight": 1,
+      "blocks": [
+        { "block": "spacestation:blue_tomato_crop", "weight": 1 },
+        { "block": "spacestation:blood_tomato_crop", "weight": 1 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "target": "spacestation:cotton_crop",
+  "mutations": [
+    {
+      "type": "nothing",
+      "weight": 7
+    },
+    {
+      "type": "death",
+      "weight": 4,
+      "block": "minecraft:dead_bush"
+    },
+    {
+      "type": "grow",
+      "weight": 3
+    },
+    {
+      "type": "transform",
+      "weight": 1,
+      "blocks": [
+        { "block": "spacestation:pyrotton_crop", "weight": 1 }
+      ]
+    }
+  ]
+}

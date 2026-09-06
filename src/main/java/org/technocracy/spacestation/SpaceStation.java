@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.entity.player.PlayerEntity;
 import org.technocracy.spacestation.chemistry.*;
 import org.technocracy.spacestation.chemistry.chemmaster.ChemMasterScreenHandler;
+import org.technocracy.spacestation.mutation.MutationRegistry;
 import org.technocracy.spacestation.network.ModPackets;
 import org.technocracy.spacestation.registry.*;
 import org.technocracy.spacestation.registry.items.*;
@@ -40,6 +41,7 @@ public class SpaceStation implements ModInitializer {
         ModWorldGeneration.init();
         ModLootModifiers.register();
         ModPackets.register();
+        MutationRegistry.register();
         PayloadTypeRegistry.playC2S().register(ModPackets.ChemMovePayload.ID, ModPackets.ChemMovePayload.CODEC);
 
         FuelRegistry.INSTANCE.add(MiscItems.SOLID_FUEL, 500); // Регистрация кастомного топлива

@@ -1,0 +1,18 @@
+{
+  "target": "minecraft:beetroots",
+  "mutations": [
+    {
+      "type": "nothing",
+      "weight": 7
+    },
+    {
+      "type": "death",
+      "weight": 4,
+      "block": "minecraft:dead_bush"
+    },
+    {
+      "type": "grow",
+      "weight": 4
+    }
+  ]
+}

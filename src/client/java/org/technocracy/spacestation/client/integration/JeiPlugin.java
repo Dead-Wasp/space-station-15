@@ -17,10 +17,14 @@ import org.technocracy.spacestation.client.integration.assembly.AssemblyJeiCateg
 import org.technocracy.spacestation.client.integration.assembly.AssemblyJeiRecipe;
 import org.technocracy.spacestation.client.integration.chemmaster.ChemMasterJeiCategory;
 import org.technocracy.spacestation.client.integration.chemmaster.ChemMasterJeiRecipe;
+import org.technocracy.spacestation.client.integration.mutation.MutationJeiCategory;
+import org.technocracy.spacestation.client.integration.mutation.MutationJeiRecipe;
 import org.technocracy.spacestation.client.integration.sublimator.SublimationJeiCategory;
 import org.technocracy.spacestation.client.integration.sublimator.SublimationJeiRecipe;
 import org.technocracy.spacestation.item.components.ToolIngredient;
 import org.technocracy.spacestation.item.components.ToolQuality;
+import org.technocracy.spacestation.mutation.MutationRegistry;
+import org.technocracy.spacestation.mutation.mutations.MutationTransform;
 import org.technocracy.spacestation.registry.ModBlocks;
 import org.technocracy.spacestation.registry.ModComponents;
 import org.technocracy.spacestation.registry.items.ChemItems;
@@ -53,6 +57,9 @@ public class JeiPlugin implements IModPlugin {
             RecipeType.create(SpaceStation.MOD_ID, "disassembly_ignition", AssemblyJeiRecipe.class);
     public static final RecipeType<AssemblyJeiRecipe> DISASSEMBLY_GENERIC =
             RecipeType.create(SpaceStation.MOD_ID, "disassembly", AssemblyJeiRecipe.class);
+    public static final RecipeType<MutationJeiRecipe> MUTATION =
+            RecipeType.create(SpaceStation.MOD_ID, "mutation", MutationJeiRecipe.class
+            );
 
     @Override
     public Identifier getPluginUid() {
@@ -80,7 +87,9 @@ public class JeiPlugin implements IModPlugin {
                 new AssemblyJeiCategory(registration.getJeiHelpers().getGuiHelper(), DISASSEMBLY_IGNITION,
                         "jei.spacestation.disassembly.ignition", ToolItems.LIGHTER),
                 new AssemblyJeiCategory(registration.getJeiHelpers().getGuiHelper(), DISASSEMBLY_GENERIC,
-                        "jei.spacestation.disassembly", ModBlocks.STEEL_WALL.asItem())
+                        "jei.spacestation.disassembly", ModBlocks.STEEL_WALL.asItem()),
+                new MutationJeiCategory(registration.getJeiHelpers().getGuiHelper(), MUTATION,
+                        "jei.spacestation.mutation", ChemItems.UNSTABLE_MUTAGEN_POWDER.asItem())
         );
     }
 
@@ -146,6 +155,36 @@ public class JeiPlugin implements IModPlugin {
         }
         registration.addRecipes(ASSEMBLY, assemblyRecipes);
         disassemblyRecipes.forEach(registration::addRecipes);
+
+        List<MutationJeiRecipe> mutationRecipes = new ArrayList<>();
+
+        for (MutationRegistry.MutationRecipe recipe : MutationRegistry.getAll()) {
+            List<ItemStack> outputs = new ArrayList<>();
+            List<Double> weights = new ArrayList<>();
+
+            for (MutationRegistry.MutationEntry entry : recipe.mutations()) {
+                if (!(entry.mutation() instanceof MutationTransform transform)) {
+                    continue;
+                }
+
+                for (MutationTransform.WeightedBlock block : transform.getBlocks()) {
+                    outputs.add(new ItemStack(block.state().getBlock().asItem()));
+                    weights.add(entry.weight());
+                }
+            }
+
+            if (!outputs.isEmpty()) {
+                ItemStack input = new ItemStack(
+                        Registries.BLOCK.get(recipe.target()).asItem()
+                );
+
+                mutationRecipes.add(
+                        new MutationJeiRecipe(input, outputs, weights)
+                );
+            }
+        }
+
+        registration.addRecipes(MUTATION, mutationRecipes);
     }
 
     private static RecipeType<AssemblyJeiRecipe> disassemblyType(ToolIngredient tool) {
@@ -170,6 +209,7 @@ public class JeiPlugin implements IModPlugin {
         registration.addRecipeCatalyst(new ItemStack(ToolItems.OMNITOOL),
                 DISASSEMBLY_SCREWING, DISASSEMBLY_WELDING, DISASSEMBLY_PRYING,
                 DISASSEMBLY_ANCHORING, DISASSEMBLY_IGNITION);
+        registration.addRecipeCatalyst(new ItemStack(ChemItems.UNSTABLE_MUTAGEN_POWDER), MUTATION);
     }
 
     private static ItemStack beaker(String chemical, double amount) {

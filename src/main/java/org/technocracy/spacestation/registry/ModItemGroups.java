@@ -274,7 +274,6 @@ public final class ModItemGroups {
                         entries.add(MiscItems.TRASH_PLASTIC);
                         entries.add(MiscItems.URANIUM);
                         entries.add(MiscItems.URANIUM_ORE);
-
                     })
                     .build()
     );

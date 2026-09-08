@@ -8,12 +8,18 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.World;
+import software.bernie.geckolib.animatable.GeoItem;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.util.GeckoLibUtil;
+
+import java.util.function.Consumer;
 import org.technocracy.spacestation.registry.items.ArmorItems;
 
-public class NukeopsArmorItem extends ArmorItem {
+public class NukeopsArmorItem extends GeckoArmorItem {
 
     public NukeopsArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
-        super(material, type, settings);
+        super(material, type, settings, "nukeops_armor");
     }
 
     @Override

@@ -11,6 +11,14 @@ repositories {
 		name = 'BlameJared'
 		url = 'https://maven.blamejared.com'
 	}
+
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -39,14 +47,19 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 	modCompileOnly "mezz.jei:jei-1.21.1-fabric:19.44.0.403"
+
+    // GeckoLib
+    modImplementation "software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}"
 	
 }
 
 processResources {
 	inputs.property "version", project.version
+	inputs.property "geckolib_version", project.geckolib_version
 
 	filesMatching("fabric.mod.json") {
-		expand "version": inputs.properties.version
+		expand "version": inputs.properties.version,
+			"geckolib_version": inputs.properties.geckolib_version
 	}
 }
 

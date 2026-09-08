@@ -243,6 +243,16 @@ public final class ModItemGroups {
                         entries.add(ToolItems.WELDER);
                         entries.add(ToolItems.WRENCH);
 
+                        // ======== ARMOR ========
+                        entries.add(ArmorItems.STEEL_HELMET);
+                        entries.add(ArmorItems.STEEL_CHESTPLATE);
+                        entries.add(ArmorItems.STEEL_LEGGINGS);
+                        entries.add(ArmorItems.STEEL_BOOTS);
+                        entries.add(ArmorItems.NUKEOPS_HELMET);
+                        entries.add(ArmorItems.NUKEOPS_CHESTPLATE);
+                        entries.add(ArmorItems.NUKEOPS_LEGGINGS);
+                        entries.add(ArmorItems.NUKEOPS_BOOTS);
+
                         // ======== PLUSHIES ========
                         entries.add(PlushieItems.PLUSHIE_BEE);
                         entries.add(PlushieItems.PLUSHIE_IAN);

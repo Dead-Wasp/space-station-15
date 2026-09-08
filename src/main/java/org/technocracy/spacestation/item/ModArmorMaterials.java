@@ -15,6 +15,7 @@ import net.minecraft.util.Identifier;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
+import org.technocracy.spacestation.registry.items.MiscItems;
 
 public class ModArmorMaterials {
 
@@ -38,6 +39,22 @@ public class ModArmorMaterials {
             4.5F,
             0.2F,
             () -> Ingredient.fromTag(NUKEOPS_REPAIR_TAG)
+    );
+
+    public static final RegistryEntry<ArmorMaterial> STEEL = register(
+            "steel",
+            Map.of(
+                    ArmorItem.Type.BOOTS, 2,
+                    ArmorItem.Type.LEGGINGS, 5,
+                    ArmorItem.Type.CHESTPLATE, 6,
+                    ArmorItem.Type.HELMET, 2,
+                    ArmorItem.Type.BODY, 6
+            ),
+            10,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
+            0.0F,
+            0.0F,
+            () -> Ingredient.ofItems(MiscItems.STEEL)
     );
 
 

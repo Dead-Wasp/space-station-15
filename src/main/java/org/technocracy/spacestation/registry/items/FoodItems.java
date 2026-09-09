@@ -175,6 +175,26 @@ public final class FoodItems {
     // =============== BREAD ===============
     //
 
+    public static final Item BREAD_MEAT = Registry.register(
+            Registries.ITEM, Identifier.of(SpaceStation.MOD_ID, "bread_meat"),
+            new Item(new Item.Settings().food(new FoodComponent.Builder()
+                    .nutrition(6).saturationModifier(0.8f).build()))
+    );
+
+    public static final Item BREAD_MEAT_RAW = Registry.register(
+            Registries.ITEM, Identifier.of(SpaceStation.MOD_ID, "bread_meat_raw"),
+            new Item(new Item.Settings().food(new FoodComponent.Builder()
+                    .nutrition(3).saturationModifier(0.3f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 0), 0.25f)
+                    .build()))
+    );
+
+    public static final Item BREAD_MEAT_SLICE = Registry.register(
+            Registries.ITEM, Identifier.of(SpaceStation.MOD_ID, "bread_meat_slice"),
+            new Item(new Item.Settings().food(new FoodComponent.Builder()
+                    .nutrition(2).saturationModifier(0.3f).build()))
+    );
+
     public static final Item BREAD_CORN = Registry.register(
             Registries.ITEM, Identifier.of(SpaceStation.MOD_ID, "bread_corn"),
             new Item(new Item.Settings().food(new FoodComponent.Builder()

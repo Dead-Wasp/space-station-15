@@ -145,7 +145,7 @@ Licenses of borrowed assets are down below
 
 `CC-BY-SA-3.0` Taken from tgstation and modified by Swept at https://github.com/tgstation/tgstation/commit/40d75cc340c63582fb66ce15bf75a36115f6bdaa. escargot from tgstation at https://github.com/tgstation/tgstation/commit/7ffd61b6fa6a6183daa8900f9a490f46f7a81955. Fills created by potato1234_x
 - src/main/resources/assets/spacestation/textures/item/food/bowl-temp/*
-- src/main/resources/assets/spacestation/textures/item/food/salad/*
+- src/main/resources/assets/spacestation/textures/item/food/salad/*d modified by potato1234x at https://github.com/tgstation/tgstation/commit/0631fe5bde73a68b4c12bdfa633c30b2cee442d5. Crosti
 - src/main/resources/assets/spacestation/textures/item/food/soup/*
 - src/main/resources/assets/spacestation/textures/item/misc/bowl/*
 
@@ -159,5 +159,8 @@ Licenses of borrowed assets are down below
 `CC-BY-SA-3.0` Added by Phunny, dragon taco modified from beef taco by MisterImp (GitHub)
 - src/main/resources/assets/spacestation/textures/item/food/taco/*
 
-`CC-BY-SA-3.0` 
+`CC-BY-SA-3.0` Taken from tgstation and modified by potato1234x at https://github.com/tgstation/tgstation/commit/0631fe5bde73a68b4c12bdfa633c30b2cee442d5. Crostini created by Github user deathride58, baguette taken from tgstation at commit https://github.com/tgstation/tgstation/commit/7ffd61b6fa6a6183daa8900f9a490f46f7a81955, cotton made by mlexf (discord 1143460554963427380). Cotton baguette and crostini variants by JuneSzalkowska. Batard by SurrealShibe (GitHub)
+- src/main/resources/assets/spacestation/textures/item/food/bread/*
+
+`CC-BY-SA-3.0`
 - 

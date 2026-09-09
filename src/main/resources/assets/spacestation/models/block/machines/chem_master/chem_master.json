@@ -2,8 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"3": "spacestation:block/machines/chem_master/chem_master_screen_on_texture",
-		"4": "spacestation:block/machines/chem_master/chem_master_loaded_texture"
+		"3": "spacestation:block/machines/chem_master/chem_master_screen_off_texture",
+		"4": "spacestation:block/machines/chem_master/chem_master_loaded_texture",
+        "particle": "spacestation:block/machines/chem_master/chem_master_loaded_texture"
 	},
 	"elements": [
 		{

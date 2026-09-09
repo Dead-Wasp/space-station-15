@@ -222,7 +222,8 @@ public final class ModBlocks {
             ChemMasterBlock::new,
             AbstractBlock.Settings.create()
                     .strength(5.0f, 30.0f)
-                    .requiresTool(),
+                    .requiresTool()
+                    .nonOpaque(),
             true
     );
 
@@ -231,7 +232,8 @@ public final class ModBlocks {
             SublimatorBlock::new,
             AbstractBlock.Settings.create()
                     .strength(5.0f, 30.0f)
-                    .requiresTool(),
+                    .requiresTool()
+                    .nonOpaque(),
             true
     );
 

@@ -16,6 +16,7 @@ Vielen Dank an alle, die zu diesem Projekt beigetragen haben ❤️
 - @AsnDen
 - @Sospurnak
 - @JrInventor05
+- @loksill
 ## Artwork / Sprites
 
 - @Dead-Wasp
@@ -31,6 +32,7 @@ Vielen Dank an alle, die zu diesem Projekt beigetragen haben ❤️
 - @didenkoaroslav515-cpu
 - @AsnDen
 - @Almaz-Ar3
+- @loksill
 ## Sound & Music
 
 - @Swino4ka
@@ -42,6 +44,7 @@ Vielen Dank an alle, die zu diesem Projekt beigetragen haben ❤️
 - @Swino4ka
 - @JrInventor05
 - @AsnDen
+- @loksill
 ## Other
 - @Swino4ka
 - @AsnDen

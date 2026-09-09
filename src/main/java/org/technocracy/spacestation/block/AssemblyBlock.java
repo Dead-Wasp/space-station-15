@@ -2,6 +2,7 @@ package org.technocracy.spacestation.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.state.property.Properties;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -122,7 +123,7 @@ public class AssemblyBlock extends Block {
 
                 if (p.getMainHandStack().getItem() == heldItem &&
                         (p.getMainHandStack().getCount() >= upgrade.cost() || p.getMainHandStack().getMaxCount() == 1)) {
-                    world.setBlockState(pos, upgrade.result().getDefaultState());
+                    world.setBlockState(pos, copyFacing(state, upgrade.result().getDefaultState()));
                     if (!p.getAbilities().creativeMode && data == null) {
                         p.getMainHandStack().decrement((int) upgrade.cost());
                     }
@@ -157,7 +158,7 @@ public class AssemblyBlock extends Block {
                 p.dropItem(new ItemStack(e.getKey().needItems().iterator().next(), (int) e.getValue().cost()), false);
             }
 
-            world.setBlockState(pos, disassembly.result().getDefaultState());
+            world.setBlockState(pos, copyFacing(state, disassembly.result().getDefaultState()));
             if (data != null) {
                 stack.set(ModComponents.CHARGE_COMPONENT, data.withCharge(data.charge() - e.getValue().fuelCost()));
             }
@@ -188,6 +189,15 @@ public class AssemblyBlock extends Block {
         sw.spawnParticles(ParticleTypes.SMOKE, x, y + 0.3, z, 8, 0.1, 0.1, 0.1, 0.02);
         sw.spawnParticles(ParticleTypes.ASH, x, y, z, 20, 10, 0.2, 0.2, 0);
         world.playSound(null, pos, SoundEvents.ITEM_AXE_SCRAPE, SoundCategory.BLOCKS, 1.0f, 1.0f);
+    }
+
+    private static BlockState copyFacing(BlockState source, BlockState target) {
+        if (source.contains(Properties.HORIZONTAL_FACING)
+                && target.contains(Properties.HORIZONTAL_FACING)) {
+            return target.with(Properties.HORIZONTAL_FACING,
+                    source.get(Properties.HORIZONTAL_FACING));
+        }
+        return target;
     }
 
     private void spawnDisassemblyEffects(World world, BlockPos pos) {

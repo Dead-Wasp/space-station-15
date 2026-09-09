@@ -12,6 +12,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import org.technocracy.spacestation.SpaceStation;
 import org.technocracy.spacestation.block.AssemblyBlock;
+import org.technocracy.spacestation.block.MachineFrameBlock;
 import org.technocracy.spacestation.chemistry.chemmaster.ChemMasterBlock;
 import org.technocracy.spacestation.chemistry.sublimator.SublimatorBlock;
 import org.technocracy.spacestation.registry.blocks.PlantBlocks;
@@ -106,7 +107,7 @@ public final class ModBlocks {
 
     public static final Block MACHINE_FRAME = register(
             "machine_frame",
-            AssemblyBlock::new,
+            MachineFrameBlock::new,
             AbstractBlock.Settings.create()
                     .strength(6.0f, 60.0f)
                     .requiresTool()
@@ -117,7 +118,7 @@ public final class ModBlocks {
 
     public static final Block MACHINE_FRAME_STAGE1 = register(
             "machine_frame_stage1",
-            AssemblyBlock::new,
+            MachineFrameBlock::new,
             AbstractBlock.Settings.create()
                     .strength(6.0f, 60.0f)
                     .requiresTool()
@@ -128,7 +129,7 @@ public final class ModBlocks {
 
     public static final Block MACHINE_FRAME_STAGE2 = register(
             "machine_frame_stage2",
-            AssemblyBlock::new,
+            MachineFrameBlock::new,
             AbstractBlock.Settings.create()
                     .strength(6.0f, 60.0f)
                     .requiresTool()
@@ -139,7 +140,7 @@ public final class ModBlocks {
 
     public static final Block MACHINE_FRAME_STAGE3 = register(
             "machine_frame_stage3",
-            AssemblyBlock::new,
+            MachineFrameBlock::new,
             AbstractBlock.Settings.create()
                     .strength(6.0f, 60.0f)
                     .requiresTool()
@@ -150,7 +151,7 @@ public final class ModBlocks {
 
     public static final Block MACHINE_FRAME_STAGE4 = register(
             "machine_frame_stage4",
-            AssemblyBlock::new,
+            MachineFrameBlock::new,
             AbstractBlock.Settings.create()
                     .strength(6.0f, 60.0f)
                     .requiresTool()
@@ -161,7 +162,7 @@ public final class ModBlocks {
 
     public static final Block MACHINE_FRAME_ASSEMBLED = register(
             "machine_frame_assembled",
-            AssemblyBlock::new,
+            MachineFrameBlock::new,
             AbstractBlock.Settings.create()
                     .strength(6.0f, 60.0f)
                     .requiresTool()

@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "spacestation:block/machines/chem_master/chem_master"
-    }
+    "facing=north": { "model": "spacestation:block/machines/chem_master/chem_master" },
+    "facing=east": { "model": "spacestation:block/machines/chem_master/chem_master", "y": 90 },
+    "facing=south": { "model": "spacestation:block/machines/chem_master/chem_master", "y": 180 },
+    "facing=west": { "model": "spacestation:block/machines/chem_master/chem_master", "y": 270 }
   }
 }

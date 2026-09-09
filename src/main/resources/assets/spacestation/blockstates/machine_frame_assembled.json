@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "spacestation:block/machines/machine_frame/assembled"
-    }
+    "facing=north": { "model": "spacestation:block/machines/machine_frame/assembled" },
+    "facing=east": { "model": "spacestation:block/machines/machine_frame/assembled", "y": 90 },
+    "facing=south": { "model": "spacestation:block/machines/machine_frame/assembled", "y": 180 },
+    "facing=west": { "model": "spacestation:block/machines/machine_frame/assembled", "y": 270 }
   }
 }

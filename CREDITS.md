@@ -24,6 +24,7 @@ Vielen Dank an alle, die zu diesem Projekt beigetragen haben ❤️
 - @PenChiK227
 - @didenkoaroslav515-cpu
 - @Almaz-Ar3
+- @sad2284
 ## Textures
 
 - @Dead-Wasp
@@ -33,6 +34,7 @@ Vielen Dank an alle, die zu diesem Projekt beigetragen haben ❤️
 - @AsnDen
 - @Almaz-Ar3
 - @loksill
+- @sad2284
 ## Sound & Music
 
 - @Swino4ka

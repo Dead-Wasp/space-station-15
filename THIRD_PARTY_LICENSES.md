@@ -69,10 +69,6 @@ Licenses of borrowed assets are down below
 - src/main/resources/assets/spacestation/textures/item/plant/chilli
 - src/main/resources/assets/spacestation/textures/block/plant/chilli
 
-`CC-BY-SA-3.0` Taken from https://github.com/vgstation-coders/vgstation13/commit/1dbcf389b0ec6b2c51b002df5fef8dd1519f8068, Growth, dead, harvest, and produce created by Chaoticaa (GitHub)
-- src/main/resources/assets/spacestation/textures/item/plant/corn
-- src/main/resources/assets/spacestation/textures/block/plant/corn
-
 `CC-BY-SA-3.0` Taken from tgstation at https://github.com/tgstation/tgstation/commit/e245d374b2976c73d0aff37cf4a443d2e75c2f57, inhands by mubururu_ (github)
 - src/main/resources/assets/spacestation/textures/item/plant/cotton
 - src/main/resources/assets/spacestation/textures/block/plant/cotton
@@ -84,10 +80,6 @@ Licenses of borrowed assets are down below
 `CC-BY-SA-3.0` Taken from https://github.com/vgstation-coders/vgstation13/commit/1dbcf389b0ec6b2c51b002df5fef8dd1519f8068, inhands by mubururu_ (github), produce modified from https://github.com/space-wizards/space-station-14/commit/484eb0bba44d3e014873e7d7026a99d7ba56f7b9#diff-5b9a7a38ef618b5f482f5baf4bb8db27dc87f9af7602d67cae9133e624aa3f91 by Chaoticaa (GitHub), Growth, harvest, and dead created by Chaoticaa (GitHub), inhands modified by Prole0 (GitHub)
 - src/main/resources/assets/spacestation/textures/item/plant/eggplang
 - src/main/resources/assets/spacestation/textures/block/plant/eggplang
-
-`CC-BY-SA-3.0` Taken from https://github.com/vgstation-coders/vgstation13/commit/1dbcf389b0ec6b2c51b002df5fef8dd1519f8068, seed.png modified from https://github.com/space-wizards/space-station-14/pull/23210/files#diff-13896c37cf761a5782bb95bbc433bb738dd59ed89276af17dccd606adb759ee5 by Chaoticaa (GitHub), Growth stages, dead, and harvest sprites created by Chaoticaa (GitHub)
-- src/main/resources/assets/spacestation/textures/item/plant/eggy
-- src/main/resources/assets/spacestation/textures/block/plant/eggy
 
 `CC-BY-SA-3.0` Taken from https://github.com/tgstation/tgstation/commit/9f2e55e83cb93e7124d06c705d1942dfec63c93a, produce created by Chaoticaa (GitHub)
 - src/main/resources/assets/spacestation/textures/item/plant/garlic
